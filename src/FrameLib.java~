@@ -1,0 +1,260 @@
+/**
+ * @file
+ * Classe FrameLib.
+ * 
+ * Tale classe definisce la frame principale.
+ * Contiene una MenuBar con due Menu : File ed Edit.
+ *
+ * File contiene :
+ *  - Salva, per salvare la libreria
+ *  - Carica, per caricare una libreria
+ *  - Stampa, per stampare al libreria
+ * 
+ * Edit contiene :
+ *  - Aggiungi, per aggiungere uno o più elementi alla libreria
+ * 
+ * FrameLib estende JFrame e implemente un ActionListener per
+ * gestire gli eventi generati dai MenuItem e un WindowListener
+ * per chiedere la conferma per uscire dal programma.
+ * 
+ */
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.awt.Desktop.*;
+
+
+public class FrameLib extends JFrame implements ActionListener,WindowListener
+{
+  private LibreriaMultimediale lib;   /**< LibreriaMultimediale su cui lavorare*/
+  private JTable tabella;             /**< JTable che mostra gli elementi 
+                                       * della libreria*/
+  private LibreriaTableModel modello; /**< Modello utilizzato nella tabella*/
+  
+  private PannelloLibreria p;  /**<Pannello principale, con tabella e 
+                                * strumenti di ricerca*/
+  
+  private MenuItem m11; /**< menu File,menu item: Salva*/
+  private MenuItem m12; /**< menu File,menu item: Carica*/
+  private MenuItem m13; /**< menu File,menu item: Stampa*/
+  private MenuItem m21; /**< menu Edit,menu item: Aggiungi*/
+  private MenuItem m31; /**< menu HowTo, menu item: Documentazione*/
+
+  private Menu m1; /**< menu File*/
+  private Menu m2; /**< menu Edit*/
+  private Menu m3; /**< menu HowTo*/
+  
+  private MenuBar mb; /**< Menu bar contentente File e Edit*/
+  
+  private File directory = null; /**<Directory in cui si apre il fileChooser*/
+  private FileInputStream fileLettura = null; /**<File di lettura per il 
+                                               * caricamento */
+  private FileOutputStream fileScrittura = null; /**<File di scrittura per il 
+                                                  * salvataggio */
+  private File fileScelto = null;                /**<File selezionato con il 
+                                                  * FileChooser, che sia 
+                                                  * effettivamente scelto 
+                                                  * dalla cartella, 
+                                                  * o inserito da tastiera.*/
+  private ObjectOutputStream os = null; /*Stream per la scrittura 
+                                         *dell'oggetto LibreriaMultimediale */
+  private ObjectInputStream is = null;  /*Stream per la lettura dell'oggetto 
+                                         * LibreriaMultimediale */
+  
+  private JFileChooser fc;      /**<file chooser che permette di scegliere quale 
+                                 * LibreriaMultimediale caricare.*/
+  private SalvaFileChooser sfc; /**<file chooser che permette di scegliere come 
+                                 * salvare la LibreriaMultimediale.*/
+  private int returnVal;        /**< Valore di ritorno dei fileChooser*/
+
+  /**
+   * Costruttore della classe FrameLib.
+   * 
+   * Inizializza gli attributi della classe, li aggiunge alla frame
+   * e aggiunge ad essi l'ActionListener, se serve.
+   * 
+   * @param Nome      Nome della Frame
+   */
+  public FrameLib (String Nome)
+  {
+    super (Nome);
+    
+    lib = new LibreriaMultimediale();
+    modello = new LibreriaTableModel (lib);
+    tabella = new JTable (modello); 
+    
+    this.setResizable(false);
+    this.setBounds(100,100, 800,600);
+
+    m11 = new MenuItem ("Salva");
+    m12 = new MenuItem ("Carica");
+    m13 = new MenuItem ("Stampa");
+    
+    m1 = new Menu ("File");
+    m1.add(m11);
+    m1.add(m12);
+    m1.add(m13);
+    
+    m21 = new MenuItem ("Aggiungi");
+    
+    m2 = new Menu ("Edit");
+    m2.add(m21);
+    
+    m31 = new MenuItem ("Documentazione");
+    
+    m3= new Menu ("How To");
+    m3.add(m31);
+      
+    mb = new MenuBar ();
+    mb.add(m1);
+    mb.add(m2);
+    mb.add(m3);
+    
+    this.setMenuBar(mb);
+    
+    m11.addActionListener(this);
+    m12.addActionListener(this);
+    m13.addActionListener(this);
+    m21.addActionListener(this);
+    m31.addActionListener(this);
+    
+    fc =  new JFileChooser();
+
+    fc.setCurrentDirectory(new File ("../save"));
+    fc.setMultiSelectionEnabled(false);
+
+    p = new PannelloLibreria(lib, tabella,modello);
+    add(p);
+    
+    this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+    this.addWindowListener(this);
+  }
+  
+  
+
+  
+  /**
+   * Determina cosa succede quando si scatena un dato evento.
+   * 
+   * Se il MenuItem premuto è Aggiungi si apre una nuova frame dalla 
+   * quale è gestito l'inserimento dei file.
+   * 
+   * Se il MenuItem premuto è Salva si apre un FileChooser che permette
+   * di decidere in quale cartella salvare la libreria e con quale nome.
+   * In caso si selezionasse un file già esistente appare una dialogBox
+   * che chiede conferma all'untente per sovrascrivere tale file o per
+   * annullare l'operazione salvando con un altro nome.
+   * 
+   * Se il MenuItem premuto è Carica si apre un FileChooser che permette
+   * di scegliere quale libreria caricare.
+   * Se avviene un errore di caricamento allora la libreria non viene
+   * modificata e rimane quella precedente a tale operazione, a terminale
+   * appare il tipo di errore.
+   * 
+   * Se il MenuItem premuto è Stampa appare una finestra di dialogo
+   * adibita alla stampa.
+   */
+  public void actionPerformed (ActionEvent e ) 
+  {
+    Object MenuItemPremuto = e.getSource();
+        
+    if (MenuItemPremuto == m21) //AGGIUNGI
+    {
+      JFrame frameAggiungi = new JFrame ("Aggiungi elemento");
+      frameAggiungi.setBounds(150,150,600,300);
+      frameAggiungi.setResizable(false);
+      
+      PannelloAggiungi p = new PannelloAggiungi (lib,frameAggiungi,tabella);
+      frameAggiungi.add(p);
+      
+      frameAggiungi.setVisible(true);
+    }
+    
+    else if (MenuItemPremuto == m11)// SALVA
+    {
+      sfc = new SalvaFileChooser(lib,fileScrittura,os);
+      sfc.setCurrentDirectory(new File ("../save"));
+      sfc.setMultiSelectionEnabled(false);
+      sfc.showSaveDialog(FrameLib.this);
+
+    }
+    else if(MenuItemPremuto == m12)//CARICA
+    { 
+      returnVal = fc.showOpenDialog(FrameLib.this);
+      if (returnVal == JFileChooser.APPROVE_OPTION) 
+      {
+        try
+        { 
+          fileLettura = new FileInputStream(fc.getSelectedFile()+"");
+          is = new ObjectInputStream(fileLettura);
+          lib = (LibreriaMultimediale)(is.readObject());
+          is.close();
+          fileLettura.close();
+          
+          //Se tutto è andato bene
+          modello = new LibreriaTableModel(lib);
+          tabella.setModel(modello);
+          p.setLibEMod(lib,modello);
+          tabella.revalidate();
+        }
+        catch(IOException ioe) 
+        {System.err.println("Errore apertura fileCaricamento/Caricamento");}
+        catch (ClassNotFoundException ioe) 
+        {System.err.println("Errore classe non trovata");}
+       
+      }
+    }
+    
+    else if (MenuItemPremuto == m13)//STAMPA
+    {
+      try {tabella.print();} 
+      catch (java.awt.print.PrinterException es) 
+      {System.err.format("Non è possibile stampare %s%n", es.getMessage());}
+    }
+    else if (MenuItemPremuto == m31) //DOCUMENTAZIONE
+    {
+      try 
+      {
+        Desktop desktop = null;
+        if (Desktop.isDesktopSupported()) 
+        {
+          desktop = Desktop.getDesktop();
+          File file = new File("../html/index.html");
+          if(file.exists())
+            desktop.open(file);        
+          else
+            JOptionPane.showMessageDialog(this,
+                           "Il file \"../html/index.html\" non è stato trovato",
+                           "File non trovato",
+                           JOptionPane.ERROR_MESSAGE);
+        }         
+      } 
+      catch (IOException de) 
+      {
+        de.printStackTrace();
+      }
+    }
+
+  }
+
+  public void windowClosing(WindowEvent we)
+  { 
+    int scelta = JOptionPane.showConfirmDialog(this,
+                             "Vuoi veramente uscire da Smemorata?",
+                             "Uscire da Smemorata?",
+                             JOptionPane.YES_NO_OPTION);
+    if(scelta == JOptionPane.YES_OPTION)
+    {
+      System.exit(0);
+    }
+  }
+  public void windowDeactivated(WindowEvent e){}
+  public void windowActivated(WindowEvent e){}
+  public void windowDeiconified(WindowEvent e){}
+  public void windowIconified(WindowEvent e){}
+  public void windowOpened(WindowEvent e){}
+  public void windowClosed(WindowEvent e){}
+
+
+}

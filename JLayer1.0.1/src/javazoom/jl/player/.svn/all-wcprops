@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player
+END
+AudioDevice.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/AudioDevice.java
+END
+PlayerApplet.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/PlayerApplet.java
+END
+JavaSoundAudioDeviceFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/JavaSoundAudioDeviceFactory.java
+END
+jlp.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/jlp.java
+END
+AudioDeviceFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/AudioDeviceFactory.java
+END
+Player.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/Player.java
+END
+AudioDeviceBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/AudioDeviceBase.java
+END
+JavaSoundAudioDevice.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/JavaSoundAudioDevice.java
+END
+NullAudioDevice.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/NullAudioDevice.java
+END
+FactoryRegistry.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/FactoryRegistry.java
+END

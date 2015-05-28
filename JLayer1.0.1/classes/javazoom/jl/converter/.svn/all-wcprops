@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter
+END
+WaveFile$WaveFormat_Chunk.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/WaveFile$WaveFormat_Chunk.class
+END
+WaveFile$WaveFileSample.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/WaveFile$WaveFileSample.class
+END
+WaveFileObuffer.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/WaveFileObuffer.class
+END
+Converter$PrintWriterProgressListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/Converter$PrintWriterProgressListener.class
+END
+WaveFile.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/WaveFile.class
+END
+jlc$jlcArgs.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/jlc$jlcArgs.class
+END
+RiffFile$RiffChunkHeader.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/RiffFile$RiffChunkHeader.class
+END
+WaveFile$WaveFormat_ChunkData.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/WaveFile$WaveFormat_ChunkData.class
+END
+RiffFile.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/RiffFile.class
+END
+Converter$ProgressListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/Converter$ProgressListener.class
+END
+Converter.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/Converter.class
+END
+jlc.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/converter/jlc.class
+END

@@ -1,0 +1,6 @@
+Per aggiungere la libreria JLayer, bisogna modifica il CLASSPATH:
+
+export CLASSPATH=$CLASSPATH:/path/to/JLayer1.0.1/jl1.0.1.jar
+
+Altrimenti si può aggiungere nell'IDE.
+

@@ -1,0 +1,319 @@
+/**
+ * @file
+ * Classe PannelloLibreria.
+ * 
+ * Pannello della frame princiaple.
+ * Contiene la tabella in cui vengono visualizzati gli elementi della 
+ * LibreriaMultimediale e una zona di ricerca per cercare un
+ * determinato FileMultimediale nella libreria.
+ * 
+ * Estende la classe JPanel e implementa un ActionListener
+ * per gestire il bottone cerca e il campo di testo.
+ * 
+ */
+
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.event.*;
+import java.awt.event.*;
+import java.awt.print.*;
+import java.awt.Desktop.*;
+import java.io.*;
+
+public class PannelloLibreria extends JPanel 
+  implements ActionListener,MouseListener{
+  
+  private JScrollPane pane;      /**< ScrollPane in cui è contenuta la tabella*/
+  private JTable tabella;        /**< JTable che mostra i file della 
+                                   * LibreriaMultimediale*/
+  private JPopupMenu popupMenu;  /**< PopupMenu che appare conun click destro 
+                                   * sulla tabella*/
+  private JOptionPane messaggio; /**< DialogBox per le Informazioni 
+                                   * del FileMultimediale*/
+  
+  private JMenuItem m1; /**< menu item: Informazioni*/
+  private JMenuItem m2; /**< menu item: Modifica*/
+  private JMenuItem m3; /**< menu item: Elimina*/
+  private JMenuItem m4; /**< menu item: Esegui*/
+  
+  private JTextField t;     /**< Inserimento chiave di ricerca*/
+  private JButton cerca;    /**< Bottone Cerca per entrare inRicerca*/
+  private JButton indietro; /**< Bottone Indietro per uscire da inRicerca*/
+  private JButton stampa;   /**< Bottone Stampa, per stampare solo i 
+                              * risultati della ricerca*/
+  
+  private LibreriaMultimediale lib;        /**< libreria contenente tutti i file
+                                            * multimediali inseriti*/
+  private LibreriaMultimediale libRicerca; /**< libreria contenente solo i file  
+                                            * multimediali risultati
+                                            * dalla ricerca*/
+  
+  private LibreriaTableModel modello;/**< Modello della tabella non inRicerca*/
+  private LibreriaTableModel  modelloRicerca; /**< Modello della 
+                                                * tabella inRicerca*/
+  
+  private FileMultimediale file; /**< FileMultimediale della libreria selezionato
+                                   * col tasto destro.*/
+  
+  private boolean inRicerca; /**< Booleano vero solo se sono in ricerca.*/
+  
+  
+  /**
+   * Costruttore della classe PannelloLibreria.
+   * 
+   * Inizializza gli attributi della classe, li aggiunge al pannello
+   * e aggiunge ad essi l'ActionListener, se serve.
+   * 
+   * @param lib      libreria di cui deve tabellare gli elementi
+   * @param tabella  tabella che deve mostrare
+   * @param modello  modello std della libreria
+   */
+  public PannelloLibreria(LibreriaMultimediale lib, JTable tabella, 
+                          LibreriaTableModel modello)
+  {
+    super();
+    
+    this.lib = lib;
+    inRicerca = false;
+    this.modello = modello;
+    
+    t = new JTextField (15);
+    cerca = new JButton("Cerca");
+    indietro = new JButton("Indietro");
+    stampa = new JButton("Stampa");
+    
+    add(t);
+    add(cerca);
+    add(indietro);
+    indietro.setEnabled(false);
+    add(stampa);
+    stampa.setEnabled(false);
+    
+    this.tabella = tabella;
+    tabella.setPreferredScrollableViewportSize(new Dimension(800, 600)); 
+    tabella.addMouseListener(this);
+    pane= new JScrollPane (tabella);
+    add(pane);     
+    
+    popupMenu = new JPopupMenu();
+   
+    m1 = new JMenuItem ("Informazioni");
+    m2 = new JMenuItem ("Modifica");
+    m3 = new JMenuItem ("Elimina");
+    m4 = new JMenuItem ("Esegui");
+    
+    popupMenu.add(m4);
+    popupMenu.addSeparator();
+    popupMenu.add(m1);
+    popupMenu.add(m2);
+    popupMenu.add(m3);
+
+    
+    cerca.addActionListener(this);
+    indietro.addActionListener(this);
+    stampa.addActionListener(this);
+    m1.addActionListener(this);
+    m2.addActionListener(this);
+    m3.addActionListener(this);
+    m4.addActionListener(this);
+    
+    messaggio = new JOptionPane();
+      
+  }
+  
+  /**
+   * Determina cosa succede quando si scatena un evento nel PannelloLibreria.
+   * 
+   * Gestisce i pulsanti del PopupMenu, visibile facendo un right click
+   * su un elemento della tabella, se non si è in ricerca. 
+   * Le quattro opzioni sono 
+   * 
+   * 1) Esegui: il FileMultimediale selezionato viene eseguito.
+   *    se si tratta di un BranoMusicale viene eseguito con un Mp3Player,
+   *    altrimenti con il programma di default.
+   * 
+   * 2) Informazioni : Appare una DialogBox con tutte le informazioni del
+   *    file, incluse quelle specifiche delle classi figlie.
+   * 
+   * 3) Modifica : Appare una nuova frame per modificare i campi che si vuole,
+   *    specifici per il tipo di classe figlia
+   * 
+   * 4) Elimina : elimina il file dalla libreria multimediale.
+   * 
+   * 
+   * Sono poi anche gestiti i tre bottoni della ricerca:
+   * 
+   * 1) Cerca: prende la stringa inserita nella JTextField e attua una
+   *    ricerca in tutta la libreria. Rende premibili gli altri due tasti e
+   *    mostra nella tabella solo i risultati della ricerca.
+   * 
+   * 2) Indietro : torna alla libreria completa, rende di nuovo inutilizzabili
+   *    i due tasti della ricerca.
+   * 
+   * 3) Stampa :stampa solo i risultati della ricerca.
+   */
+  
+  public void actionPerformed(ActionEvent e) 
+  {
+    Object sorgente = e.getSource();
+    
+    if( sorgente == m1 ) //INFORMAZIONI
+    {
+      messaggio.showMessageDialog(this, file.toString(),"Informazioni",
+                                  JOptionPane.INFORMATION_MESSAGE);
+    }
+    else if ( sorgente == m2 ) // MODIFICA
+    {
+      JFrame frameModifica = new JFrame ("Modifica");
+      frameModifica.setBounds(150,150,600,250);
+      frameModifica.setResizable(false);
+      
+      PannelloModifica panMod=new PannelloModifica(file,frameModifica,tabella);
+      
+      frameModifica.add(panMod);
+      frameModifica.setVisible(true);
+      
+    }
+    else if ( sorgente == m3 ) //ELIMINA
+    {
+      lib.Elimina(file);
+      tabella.revalidate();
+    }
+    else if ( sorgente == m4 ) //ESEGUI
+    {
+      Esegui();
+    }
+    else if ( sorgente == cerca )  //CERCA
+    {
+      inRicerca = true;
+      indietro.setEnabled(true);
+      stampa.setEnabled(true);
+      
+      libRicerca = lib.Cerca(t.getText());
+      modelloRicerca = new LibreriaTableModel (libRicerca);
+      tabella.setModel (modelloRicerca);
+      tabella.repaint();
+      tabella.revalidate();
+  
+    }
+    else if ( sorgente == indietro) //INDIETRO
+    {
+      inRicerca = false;
+      indietro.setEnabled(false);
+      stampa.setEnabled(false);
+      
+      tabella.setModel (modello);
+      tabella.revalidate();
+      
+    }
+    else if ( sorgente == stampa ) //STAMPA
+    {
+      try {
+        if (! tabella.print()) {
+          System.err.println("Errore");
+        }
+      } catch (java.awt.print.PrinterException es) {
+        System.err.format("Non è possibile stampare %s%n", es.getMessage());
+      }
+    }
+    
+  }
+  
+  
+  /**
+   * Esegue un FileMultimediale.
+   * 
+   * Funzione privata che effettivamente esegue un file.
+   * Se il file è un BranoMusicale allora si utilizza un Mp3Player,
+   * altrimenti il file viene aperto con il programma associato di
+   * default.
+   * Da errore se il percorso del file  non è corretto.
+   */
+  private void Esegui ()
+  {
+    try 
+    {
+      Desktop desktop = null;
+      if (Desktop.isDesktopSupported()) 
+      {
+        desktop = Desktop.getDesktop();
+        File f = new File(file.getPercorsoFile());
+        if(f.exists())
+        {
+          if(file instanceof BranoMusicale)
+          {
+            Mp3Player p = new Mp3Player (file);
+            p.setVisible(true);
+          }
+          else
+            desktop.open(f);        
+        }
+        else 
+          JOptionPane.showMessageDialog(this,"Percorso del file Errato",
+                                        "Errore Percorso",
+                                        JOptionPane.ERROR_MESSAGE);
+      }         
+    } 
+    catch (IOException de) 
+    {
+      de.printStackTrace();
+      
+    }
+    
+  }
+  
+  /**
+   * Modifica la libreria su cui lavorare e il suo modello.
+   * 
+   * Utilizzato per il caricamento di una libreria, serve per aggiornare
+   * tutti i vari pannelli.
+   * 
+   * @param lib     nuova libreria
+   * @param modello nuovo modello
+   */
+  
+  public void setLibEMod (LibreriaMultimediale lib, LibreriaTableModel modello)
+  {
+    this.lib = lib;
+    this.modello = modello;
+  }
+  
+/**
+ * Determina cosa succede in base al click destro del mouse
+ * 
+ * Quando viene premuto il tasto destro del mouse su un elemento 
+ * della tabella e non vi è una ricerca in corso appare un 
+ * PopupMenu con le opzioni possibili sui file.
+ */
+  public void mouseClicked(MouseEvent e) 
+  {
+    if (e.getButton() == java.awt.event.MouseEvent.BUTTON3 && !inRicerca) 
+    {
+      int riga = tabella.rowAtPoint(e.getPoint());
+      popupMenu.show(tabella, e.getX(), e.getY());
+      file = lib.fm[riga]; 
+    }
+  }
+  
+  /**
+   * Determina cosa succede in base a diversi click del mouse.
+   * 
+   * Se il mouse viene premuto due volte, il file viene eseguito, sia
+   * che ci si trovi inRicerca o no.
+   */
+  public void mousePressed(MouseEvent e) {
+    if(e.getClickCount() == 2)
+    {
+      int riga = tabella.rowAtPoint(e.getPoint());
+      if(inRicerca)
+        file = libRicerca.fm[riga];
+      else
+        file = lib.fm[riga]; 
+      Esegui();
+    }
+  }
+  public void mouseReleased(MouseEvent e) {}
+  public void mouseEntered(MouseEvent e) {}
+  public void mouseExited(MouseEvent e) {}
+  
+}

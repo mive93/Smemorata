@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder
+END
+InputStreamSource.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/InputStreamSource.java
+END
+JavaLayerException.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerException.java
+END
+au2lin.ser
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/au2lin.ser
+END
+DecoderErrors.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/DecoderErrors.java
+END
+Decoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Decoder.java
+END
+BitstreamException.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/BitstreamException.java
+END
+BitReserve.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/BitReserve.java
+END
+huffcodetab.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/huffcodetab.java
+END
+JavaLayerErrors.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerErrors.java
+END
+SampleBuffer.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/SampleBuffer.java
+END
+OutputChannels.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/OutputChannels.java
+END
+FrameDecoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/FrameDecoder.java
+END
+DecoderException.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/DecoderException.java
+END
+BitstreamErrors.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/BitstreamErrors.java
+END
+Header.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Header.java
+END
+JavaLayerError.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerError.java
+END
+Bitstream.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Bitstream.java
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/readme.txt
+END
+LayerIIIDecoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/LayerIIIDecoder.java
+END
+JavaLayerHook.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerHook.java
+END
+JavaLayerUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerUtils.java
+END
+SynthesisFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/SynthesisFilter.java
+END
+Source.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Source.java
+END
+Equalizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Equalizer.java
+END
+lin2au.ser
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/lin2au.ser
+END
+l3reorder.ser
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/l3reorder.ser
+END
+Manager.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Manager.java
+END
+LayerIDecoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/LayerIDecoder.java
+END
+Crc16.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Crc16.java
+END
+Control.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Control.java
+END
+sfd.ser
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/sfd.ser
+END
+LayerIIDecoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/LayerIIDecoder.java
+END
+Obuffer.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/decoder/Obuffer.java
+END

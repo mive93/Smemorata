@@ -1,0 +1,89 @@
+/** 
+ * @file
+ * Classe EBook.
+ * 
+ * Tale classe definisce un oggetto del tipo ebook.
+ * Estende la classe FileMultimediale.java .
+ * 
+ * Implementa l'interfaccia Serializable poichè in tal modo gli
+ * oggetti di questa classe possono essere serializzati, ovvero salvati su 
+ * file come oggetti.
+ * 
+ * 
+ */
+
+import java.io.*;
+
+public class EBook extends FileMultimediale implements Serializable
+{
+  private int NumPagine;  /**< Numero di pagine dell'EBook*/
+  
+    
+  /**
+   * Costruttore della classe EBook.
+   * 
+   * Inizializza gli attributi della classe invocando il costruttore della
+   * classe padre per poi inizializzare quelli propri della classe stessa.
+   *
+   * @param PercorsoFile  path dell'ebook
+   * @param Titolo        titolo dell'ebook
+   * @param Autore        autore dell'ebook
+   * @param Anno          anno di creazione dell'ebook
+   * @param NumPagine     numero di pagine dell'ebook
+   */
+  public EBook(String PercorsoFile, String Titolo, String Autore,
+               int Anno, int NumPagine) 
+  {
+    super (PercorsoFile, Titolo, Autore, Anno);
+    this.NumPagine = NumPagine;
+  }
+
+  /**
+   * Modifica gli attributi dell'oggetto.
+   
+   * Gli attributi vengono modificati solo se sono validi.
+   * 
+   * @param percorsoFile  nuovo percorso 
+   * @param titolo        nuovo titolo
+   * @param autore        nuovo autore
+   * @param anno          nuovo anno
+   * @param numPagine     nuovo numero delle pagine
+   */
+  public void Modifica ( String percorsoFile, String titolo, String autore, 
+                        int anno ,int numPagine)
+  {
+    super.Modifica(percorsoFile, titolo,autore, anno);
+    if(numPagine != -1)this.NumPagine = numPagine;
+  }
+  
+  /**
+   * Redifinisce il metodo toString().
+   * 
+   * @return   Ritorna una stringa che concatena gli attributi dell' EBook,
+   *           ovvero ciò che si vuole stampare quando invoco
+   *           System.out.println(e); dove e è un EBook.
+   */
+    public String toString () 
+  {
+    return super.toString()+"\nNumero Pagine: "+NumPagine;
+  }  
+    
+  /**
+   * Cerca una stringa/sottostringa nei campi dell'EBook.
+   * 
+   * Ridefinisce il metodo Cerca(String s) della classe padre.
+   * 
+   * @param s      stringa da ricercare
+   * @return       ritorna vero solo se ha avuto almeno un match nelle 
+   *               sottostringhe degli attributi dell'EBook con la stringa s.
+   */  
+    public boolean Cerca (String s)
+  {
+    String numPagine = this.NumPagine+"";
+    if(!super.Cerca(s) && numPagine.lastIndexOf(s) == -1 )
+           return false;
+    return true;
+  }
+    
+    
+}

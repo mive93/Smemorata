@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/advanced
+END
+AdvancedPlayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/advanced/AdvancedPlayer.java
+END
+jlap.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/advanced/jlap.java
+END
+PlaybackEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/advanced/PlaybackEvent.java
+END
+PlaybackListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/src/javazoom/jl/player/advanced/PlaybackListener.java
+END

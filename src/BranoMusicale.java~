@@ -1,0 +1,100 @@
+/** 
+ * @file
+ * Classe BranoMusicale.
+ * 
+ * Tale classe definisce un oggetto del tipo brano musicale.
+ * Estende la classe FileMultimediale.java .
+ * 
+ * Implementa l'interfaccia Serializable poichè in tal modo gli
+ * oggetti di questa classe possono essere serializzati, ovvero salvati su 
+ * file come oggetti.
+ * 
+ * 
+ */
+
+import java.io.*;
+
+public class BranoMusicale extends FileMultimediale implements Serializable
+{
+  private int Durata;                  /**< Durata del BranoMusicale in secondi*/
+  private int FrequenzaCampionamento;  /**< Frequenza del BranoMusicale*/
+  
+  
+  /**
+   * Costruttore della classe BranoMusicale.
+   * 
+   * Inizializza gli attributi della classe invocando il costruttore della
+   * classe padre per poi inizializzare quelli propri della classe stessa.
+   *
+   * @param PercorsoFile           path del brano musicale
+   * @param Titolo                 titolo del brano musicale
+   * @param Autore                 autore del brano musicale
+   * @param Anno                   anno di creazione del brano musicale
+   * @param Durata                 durata di un brano musicale
+   * @param FrequenzaCampionamento frequenza di un brano musicale
+   */
+  public BranoMusicale ( String PercorsoFile, String Titolo, String Autore, 
+                        int Anno, int Durata, int FrequenzaCampionamento)
+  {
+    super (PercorsoFile, Titolo, Autore, Anno);
+    this.Durata = Durata;
+    this.FrequenzaCampionamento = FrequenzaCampionamento;
+  }
+  
+  /**
+   * Modifica gli attributi dell'oggetto.
+   
+   * Gli attributi vengono modificati solo se sono validi.
+   * 
+   * @param percorsoFile            nuovo percorso 
+   * @param titolo                  nuovo titolo
+   * @param autore                  nuovo autore
+   * @param anno                    nuovo anno
+   * @param durata                  nuova durata
+   * @param frequenzaCampionamento  nuovo frequenza   
+   */
+  public void Modifica ( String percorsoFile, String titolo, String autore, 
+                        int anno ,int durata, int frequenzaCampionamento)
+  {
+    super.Modifica(percorsoFile, titolo,autore, anno);
+    if(durata != -1 ) 
+      this.Durata = durata;
+    if(frequenzaCampionamento != -1) 
+      this.FrequenzaCampionamento = frequenzaCampionamento;
+  }
+  
+    
+  /**
+   * Redifinisce il metodo toString().
+   * 
+   * @return   Ritorna una stringa che concatena gli attributi del 
+   *           BranoMusicale,ovvero ciò che si vuole stampare quando 
+   *           invoco System.out.println(bm); dove bm è un BranoMusicale.
+   */
+    public String toString () 
+  {
+      
+    return super.toString()+"\nDurata: "+Durata+"\nFrequenza Campionamento: "
+      +FrequenzaCampionamento;
+  }
+  
+  /**
+   * Cerca una stringa/sottostringa nei campi del BranoMusicale.
+   * 
+   * Ridefinisce il metodo Cerca(String s) della classe padre.
+   * 
+   * @param s      stringa da ricercare
+   * @return       ritorna vero solo se ha avuto almeno un match nelle 
+   *               sottostringhe degli attributi del BranoMusicale
+   *               con la stringa s.
+   */    
+    public boolean Cerca (String s)
+  {
+    String durata = this.Durata+"";
+    String frequenza = this.FrequenzaCampionamento +"";
+    if(!super.Cerca(s) && durata.lastIndexOf(s) == -1 
+         &&  frequenza.lastIndexOf(s) == -1)
+           return false;
+    return true;
+  }
+}

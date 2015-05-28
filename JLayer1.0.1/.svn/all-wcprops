@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1
+END
+setEnvAnt.bat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/setEnvAnt.bat
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/build.xml
+END
+jl1.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/jl1.0.1.jar
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/LICENSE.txt
+END
+build-win32.bat
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/build-win32.bat
+END
+playerapplet.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/playerapplet.html
+END
+CHANGES.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/CHANGES.txt
+END
+build-unix.sh
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/build-unix.sh
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/README.txt
+END

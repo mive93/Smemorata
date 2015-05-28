@@ -1,0 +1,43 @@
+import javax.swing.*;
+import java.awt.*;
+import javax.swing.event.*;
+import java.awt.event.*;
+import java.util.*;
+import java.awt.Color;
+
+public class Tabella extends JTable
+{
+  private LibreriaMultimediale lib;
+  private List<Color> rowColours = Arrays.asList(
+                                         Color.RED,
+                                         Color.GREEN,
+                                         Color.CYAN
+                                        );
+  
+  public RowTable(TableModel model, LibreriaMultimediale lib)
+  {
+    super(model);
+    this.lib = lib
+  }
+  
+  public Component prepareRenderer(TableCellRenderer renderer, int row, int column)
+  {
+    Component c = super.prepareRenderer(renderer, row, column);
+    
+    if (!isRowSelected(row))
+    {
+      Color color;
+      if(lib.fm[row] instanceof BranoMusicale)
+        colore =  rowColours.get(1);
+      else if(lib.fm[row] instanceof Video)
+        colore =  rowColours.get(2);
+      else if(lib.fm[row] instanceof EBook)
+        colore =  rowColours.get(3);
+      
+      c.setBackground(color == null ? getBackground() : color);
+    }
+    
+    return c;
+  }
+  
+}

@@ -1,0 +1,287 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder
+END
+LayerIIDecoder.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIDecoder.class
+END
+LayerIIIDecoder$gr_info_s.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$gr_info_s.class
+END
+LayerIIIDecoder$temporaire.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$temporaire.class
+END
+Bitstream.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Bitstream.class
+END
+LayerIDecoder$SubbandLayer1.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder$SubbandLayer1.class
+END
+LayerIIIDecoder$III_side_info_t.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$III_side_info_t.class
+END
+JavaLayerUtils.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerUtils.class
+END
+Equalizer$EQFunction.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Equalizer$EQFunction.class
+END
+Decoder.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Decoder.class
+END
+LayerIIDecoder$SubbandLayer2.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIDecoder$SubbandLayer2.class
+END
+BitReserve.class
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/BitReserve.class
+END
+Manager.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Manager.class
+END
+LayerIIIDecoder$temporaire2.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$temporaire2.class
+END
+JavaLayerErrors.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerErrors.class
+END
+OutputChannels.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/OutputChannels.class
+END
+Decoder$Params.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Decoder$Params.class
+END
+au2lin.ser
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/au2lin.ser
+END
+Crc16.class
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Crc16.class
+END
+LayerIDecoder$SubbandLayer1Stereo.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder$SubbandLayer1Stereo.class
+END
+Control.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Control.class
+END
+FrameDecoder.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/FrameDecoder.class
+END
+DecoderException.class
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/DecoderException.class
+END
+l3reorder.ser
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/l3reorder.ser
+END
+LayerIDecoder$SubbandLayer1IntensityStereo.class
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder$SubbandLayer1IntensityStereo.class
+END
+BitstreamErrors.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/BitstreamErrors.class
+END
+Obuffer.class
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Obuffer.class
+END
+Header.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Header.class
+END
+LayerIIDecoder$SubbandLayer2Stereo.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIDecoder$SubbandLayer2Stereo.class
+END
+JavaLayerError.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerError.class
+END
+InputStreamSource.class
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/InputStreamSource.class
+END
+LayerIIIDecoder.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder.class
+END
+JavaLayerException.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerException.class
+END
+JavaLayerHook.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerHook.class
+END
+LayerIIDecoder$SubbandLayer2IntensityStereo.class
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIDecoder$SubbandLayer2IntensityStereo.class
+END
+LayerIIIDecoder$SBI.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$SBI.class
+END
+SynthesisFilter.class
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/SynthesisFilter.class
+END
+sfd.ser
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/sfd.ser
+END
+Source.class
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Source.class
+END
+Equalizer.class
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/Equalizer.class
+END
+DecoderErrors.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/DecoderErrors.class
+END
+LayerIIIDecoder$Sftable.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$Sftable.class
+END
+BitstreamException.class
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/BitstreamException.class
+END
+huffcodetab.class
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/huffcodetab.class
+END
+LayerIDecoder.class
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder.class
+END
+SampleBuffer.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/SampleBuffer.class
+END
+LayerIDecoder$Subband.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder$Subband.class
+END
+lin2au.ser
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/decoder/lin2au.ser
+END

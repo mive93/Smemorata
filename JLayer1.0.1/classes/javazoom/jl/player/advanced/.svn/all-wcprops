@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/player/advanced
+END
+jlap.class
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/player/advanced/jlap.class
+END
+PlaybackEvent.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/player/advanced/PlaybackEvent.class
+END
+jlap$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/player/advanced/jlap$1.class
+END
+jlap$InfoListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/player/advanced/jlap$InfoListener.class
+END
+PlaybackListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/player/advanced/PlaybackListener.class
+END
+AdvancedPlayer.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/2/trunk/smemorata/JLayer1.0.1/classes/javazoom/jl/player/advanced/AdvancedPlayer.class
+END
